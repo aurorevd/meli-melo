@@ -1,0 +1,26 @@
+
+
+/* .ppdiv1{
+    width:100% !important;
+    height:50% !important;
+   
+} */
+
+@-ms-viewport {
+    width: device-width;
+  }
+  
+  figcaption,
+  footer,
+  header,
+  main,
+  nav,
+  section {
+    display: block;
+  }
+.header{
+    background-size: cover;
+     background-position: center top;
+     min-height: 600px;
+     
+}
