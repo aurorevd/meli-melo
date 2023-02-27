@@ -1,42 +1,52 @@
-.logo{
-    height:7%;
-    width: 10%;
-    object-fit:cover;
-    
-    
-}
+
 
 .containerNavBar{
     width: 100% !important;
-  
+    border: none;
+    text-decoration: none;
 }
 
 .btn{
-    background-color: #00c4cc !important;
+    background-color: #25eedc !important;
     color:white !important;
     border: none !important;
     
 }
 .btn:hover{
-    color: #00c4cc !important ;
+    color: #25eedc !important ;
     background-color: #fff !important;
-    border: 1px solid #00c4cc ;
+    border: 1px solid #25eedc ;
   }
+
+.btn2{
+    background-color:#dc25ee!important;
+    color:white !important;
+    border: none !important;
+    
+}
+.btn2:hover{
+    color: #dc25ee !important ;
+    background-color: #fff !important;
+    border: none !important;
+  }
+
 .navbar{
     display: flex;
     align-items: center;
-    /* color: red !important; */
-    /* border-bottom: 1px solid #a4e9eb; */
-
-
-    /* border-bottom: 1px solid #712cf9; */
-    /* box-shadow: 0px 0px 9px 0px rgb(120, 120, 120); */
-    /* background-color: #00c4cc; color of the project */
-    /* background-color: #c8c8fa; */
 }
 .leftBar{
-    /* border-right: 1px solid #c8c8fa ; */
+  
     line-height: 50px;
+    width:20%;
+}
+
+.random{
+    width:60%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #00c4cc;
 }
 
 .loginCard{

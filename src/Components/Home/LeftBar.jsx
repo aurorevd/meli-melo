@@ -4,15 +4,12 @@ import RandomText from '../PostFunctions/RandomText'
 
 export default function LeftBar() {
   return (
-    <div>
-      <div class="container-fluid">
-    <div class="row flex-nowrap">
-        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-none  leftBar">
+    
+        <div class="leftBar">
             {/* bg-light */}
-            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2  min-vh-100">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 ">
                 <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-secondary text-decoration-none">
-                    <span class="fs-5 d-none d-sm-inline">DashBoard</span>
-                    
+                    <span class="fs-5 d-none d-sm-inline">DashBoard</span>   
                 </a>
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start " id="menu">
                     <li class="nav-item">
@@ -58,19 +55,9 @@ export default function LeftBar() {
                     </li>
                 </ul>
                 <hr/>
-               
             </div>
         </div>
-        <div class="col py-3 row flex-nowrap">
-         <RandomText/>
-        </div>
-        {/* <div class="col-auto py-3 col-xl-3 px-sm-2  right-bar row flex-nowrap">  {/* bg-light */}
 
-            {/* <p>Friends </p>
-        </div> */} 
-    </div>
-</div>
-    </div>
   )
 }
 

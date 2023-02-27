@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/melimelo.gif"
+import Logo from "../../assets/2.png"
 import { Link } from "react-router-dom";
 import '../Home/Style.css'
 import PostPopUp from "./PostPopUp";
@@ -14,11 +14,14 @@ const NavBar = () => {
     };
   
     const logoStyle = {
-      display: "inline-block",
+    
       width: "250px",
       height: "100px",
-      backgroundImage: `url(${hover ? Logo : Logo2})`,
+      backgroundImage: `url(${hover ? Logo2 : Logo})`,
       backgroundSize: "cover",
+      textDecoration: "none",
+      border: "none !important",
+  boxShadow: "none !important"
     };
 
   const req = async () => {
@@ -41,16 +44,9 @@ const NavBar = () => {
           <span class="navbar-toggler-icon">
           </span>
         </button>
-  
-        <Link href="#" onMouseEnter={handleHover} onMouseLeave={handleHover} class="navbar-brand" to="/" >
-          <img   alt="" style={logoStyle} class= "img-fluid object-fit-cover  rounded m-0 ms-4 my-0 logoimg"  />
-        </Link>
-      
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-          {/* <li>
-            <input class="form-control  m-2 pr-5" type="search" placeholder="Search" aria-label="Search"></input>
-          </li> */}
+
+        <div class="collapse navbar-collapse " id="navbarTogglerDemo03">
+          <ul class="navbar-nav  mt-2 mt-lg-0 justify-start">
             <li class="nav-item active">
               <Link class="nav-link m-2"  to="/">
                 Home
@@ -66,7 +62,14 @@ const NavBar = () => {
                 Groups
               </Link>
             </li>
-            
+          </ul>
+        </div>
+  
+        <Link href="#" style={{ ...logoStyle, border: 'none !important' }}  onMouseEnter={handleHover} onMouseLeave={handleHover} class="border-0 text-decoration-none object-fit-cover shadow-none" to="/" >
+        </Link>
+      
+        <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
+          <div class="navbar-nav ms-auto mt-2 mt-lg-0">
             <Link class="nav-link width=auto "  to="/login">
               <button type="button" class="btn  me-2 ">Log In
               </button>
@@ -78,10 +81,12 @@ const NavBar = () => {
               </button>
             </Link>
 
-            <button onClick={req} type="button" class="btn me-3">
+            <div class="nav-link width=auto">
+            <button onClick={req} type="button" class=" btn2 me-3">
               Logout
             </button>
-          </ul>
+            </div>
+          </div>
         </div>
       </nav>
     </div>

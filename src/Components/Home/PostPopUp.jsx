@@ -28,7 +28,6 @@ function PostPopUp() {
         </Modal.Header>
         <Modal.Body>
         <div >
-        <AsciiArtSketch />
     {/* <label for="exampleFormControlTextarea1"></label>
     <textarea class="form-control" id="exampleFormControlTextarea1"placeholder='lets post something!!!' rows="3"></textarea> */}
   </div>
