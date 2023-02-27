@@ -58,14 +58,16 @@ export default function LeftBar() {
              
           </div>
       </div>
-      <div class="col py-3 row flex-nowrap">
-       {/* <RandomText/> */}Posts come here
-      </div>
-      <div class="col-auto py-3 col-xl-3 px-sm-2  right-bar row flex-nowrap"> 
+      {/* <div class="col py-3 row flex-nowrap">
+       {/* <RandomText/> */}
+      {/* </div> */}
+      {/* <div class="col-auto py-3 col-xl-3 px-sm-2  right-bar row flex-nowrap">  */}
        {/* {/* bg-light */}
 
-      <p>Friends list </p>
-       </div> 
+      {/* <p>Friends list </p> */}
+       {/* </div>   */}
+
+       {/* <ghjfekwl */}
   </div>
 </div>
   </div>
