@@ -49,45 +49,72 @@ function SignUp() {
   
   return (
 
-    <div>
+    <div >
       <LoginPage/>
       <div class="div m-5">   
-     
-   <form onSubmit={onSubmit}>
-   <div class="form-group m-5 ">
-    <h2 class="h3 mb-4">Sign Up</h2>
-    <p>It's free and always will be!</p>
-    <div class="row my-1">
-        <div class="col-md-6">
-            <div class="form-outline">
-               
-    <label htmlFor="username" class="m-5 w-50">Username</label>
-    <input ref={inputRefUsername} class="form-control m-2 w-50" type="text"  placeholder="First Name"></input>
-   <label for="exampleInputEmail1 m-5 w-50">First Name</label>
-   <input ref={inputRefFirstName}  class="form-control m-2 w-50" type="text"  placeholder="First Name"></input>
-   <label for="exampleInputEmail1 m-5 w-50">Last Name</label>
-   <input ref={inputRefLastName} class="form-control m-2 w-50" type="text" placeholder="Last Name"></input>
-   <label for="exampleInputEmail1 m-5 w-50">Email address</label>
-  <input ref={inputRefEmail}  name="email" class="form-control m-2 w-50" type="email"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email"/>
-    <label for="exampleInputPassword1">Password</label>
-          <input ref={inputRefPassword} type="password" class="form-control m-2 w-50" id="exampleInputPassword1" placeholder="Password" />
-          <label for="exampleInputPassword1">Confirm Password</label>
-          <input ref={inputRefConfPassword} type="confirmpassword" class="form-control m-2 w-50" id="exampleInputPassword" placeholder="Password" />  
-          <div class="form-check">
-            <input class="form-check-input custom-checkbox" type="checkbox" vgit alue="" id="flexCheckChecked" checked/>
-            <label class="form-check-label" for="flexCheckChecked">
-                Accept the terms and conditions
-            </label>
-            </div> 
-          <button type="submit" class="btn m-2 mt-5 button">Sign Up!</button>
+       <form onSubmit={onSubmit}>
+        <div class="form-group m-5 ">
+        <h2 class="h3 mb-4">Sign Up</h2>
+        <p>It's free and always will be!</p>
 
+          <div class="col-md-6">
+            <div class="form-outline">
+            <label class="form-label " for="typeText"></label>
+            <input ref={inputRefUsername} class="form-control uname" type="text"  placeholder="User Name"></input>
+            </div>
           </div>
-          </div></div>
-   </div>
-   </form>
-    </div>
+          <div class="row my-1">
+          <div class="col-md-6">
+                    <div class="form-outline">
+                        <label class="form-label " for="typeText"></label>
+                        <input ref={inputRefFirstName} class="form-control  " type="text"  placeholder="First Name"></input>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                <div class="form-outline">
+                    <label  class="form-label " for="typeText"></label>
+                    <input ref={inputRefLastName}class="form-control  " type="text" placeholder="Last Name"></input>
+                </div>
+            </div>
+          </div>
+          
+         
+        <div class="col-md-6">
+                <div class="form-outline">
+                <label  class="form-label  " for="typeText"></label>
+                <input ref={inputRefEmail} name="email" class="form-control emailInput" type="email"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email" />
+                </div>
+            </div>
+            <div class="row my-1">
+            <div class="col-md-6">
+                <div class="form-outline">
+                    <label class="form-label m-2" for="typeText"></label>
+                    <input ref={inputRefPassword} type="password" class="form-control  " id="exampleInputPassword1" placeholder="Password" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-outline">
+                <label  class="form-label m-2" for="typeText"></label>
+                <input ref={inputRefConfPassword} type="confirmpassword" class="form-control  " id="exampleInputPassword1" placeholder="confirm Password" />  
+                    {/* <input type="text" id="typeText" class="form-control" /> */}
+                </div>
+            </div>
+        </div>
+            <div class="mt-4">
+                <div class="form-check">
+                <input   class="form-check-input custom-checkbox" type="checkbox" value="" id="flexCheckChecked" checked/>
+                <label class="form-check-label" for="flexCheckChecked">
+                    Accept the terms and conditions
+                </label>
+                </div> 
+            </div>
+            
+            <button type="submit" class="btn  mt-5 button">Sign Up!</button>
+            </div>
+          </form>
       </div>
-   
+         
+    </div>
    
   )
 }

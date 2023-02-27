@@ -49,10 +49,10 @@ export default function LeftBar() {
                         <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">idk group</span> </a>
                     </li>
-                    <li>
+                    {/* <li>
                         <a href="#" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">yes i know group</span> </a>
-                    </li>
+                    </li> */}
                 </ul>
                 <hr/>
             </div>

@@ -82,7 +82,7 @@ const NavBar = () => {
             </Link>
 
             <div class="nav-link width=auto">
-            <button onClick={req} type="button" class=" btn2 me-3">
+            <button onClick={req} type="button" class=" btn me-3">
               Logout
             </button>
             </div>
