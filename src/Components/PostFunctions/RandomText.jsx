@@ -72,7 +72,7 @@ function RandomText() {
   };
   
   return (
-  <div class="flex">
+  <div class="random">
       {messages.map((msg) => (
         <span className={msg.font_family}>
           {" "}{msg.content1}{" "}

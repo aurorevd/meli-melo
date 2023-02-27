@@ -8,15 +8,13 @@ import './Style.css'
 function HomePage() {
   
   return (
-    
-      <div className="relative">
-        
+    <div className="relative">
       <NavBar/>
-      <div class="flex-nowrap">
-      <LeftBar/>
-         <RandomText/>
-        </div>
+      <div class="flex">
+        <LeftBar/>
+        <RandomText/>
       </div>
+    </div>
   )
 }
 
