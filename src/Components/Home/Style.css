@@ -5,30 +5,20 @@
     border: none;
     text-decoration: none;
 }
-
 .btn{
-    background-color: #25eedc !important;
+    background-color: #00c4cc !important;
     color:white !important;
     border: none !important;
     
 }
 .btn:hover{
-    color: #25eedc !important ;
+    color: #00c4cc !important ;
     background-color: #fff !important;
-    border: 1px solid #25eedc ;
+    border: 1px solid #00c4cc ;
   }
 
-.btn2{
-    background-color:#dc25ee!important;
-    color:white !important;
-    border: none !important;
-    
-}
-.btn2:hover{
-    color: #dc25ee !important ;
-    background-color: #fff !important;
-    border: none !important;
-  }
+
+
 
 .navbar{
     display: flex;

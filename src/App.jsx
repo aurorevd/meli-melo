@@ -22,7 +22,7 @@ const App = () => {
     <div >
       <AuthProvider>
         <BrowserRouter history={history}>
-
+          {/* <SignUp/> */}
           <Routes>
           <Route path="/loginsignup" element={<SignUp/>}/>
             <Route path="/" element={<HomePage />}/>
@@ -30,7 +30,7 @@ const App = () => {
               <Route path="/loginsignup" element={<LoginPage />} /> 
                <Route path = "/post" element={<PostPopUp/>}/>  
                <Route path= "/profile" element={<ProfilePageLayout/>}/> 
-
+            {/* ad */}
           </Routes>
         </BrowserRouter>
       </AuthProvider>
