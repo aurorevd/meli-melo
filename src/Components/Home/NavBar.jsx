@@ -70,12 +70,12 @@ const NavBar = () => {
       
         <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
           <div class="navbar-nav ms-auto mt-2 mt-lg-0">
-            <Link class="nav-link width=auto "  to="/login">
+            <Link class="nav-link width=auto "  to="/loginsignup">
               <button type="button" class="btn  me-2 ">Log In
               </button>
             </Link>
           
-            <Link class="nav-link width=auto "  to="/signup">
+            <Link class="nav-link width=auto "  to="/loginsignup">
               <button type="button" class="btn me-3">
                 Sign Up
               </button>
