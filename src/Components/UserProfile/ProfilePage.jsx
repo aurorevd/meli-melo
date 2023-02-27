@@ -12,7 +12,7 @@ const ProfilePage = () => {
 
    return (
       <div>
-      Welcom {auth.user}
+       {auth.user}
       <button onClick={handleLogout}>Logout</button>
       </div>
    )

@@ -21,7 +21,7 @@ const NavBar = () => {
       backgroundSize: "cover",
       textDecoration: "none",
       border: "none !important",
-  boxShadow: "none !important"
+      boxShadow: "none !important"
     };
 
   const req = async () => {
@@ -47,13 +47,8 @@ const NavBar = () => {
 
         <div class="collapse navbar-collapse " id="navbarTogglerDemo03">
           <ul class="navbar-nav  mt-2 mt-lg-0 justify-start">
-            <li class="nav-item active">
-              <Link class="nav-link m-2"  to="/">
-                Home
-              </Link>
-            </li>
             <li class="nav-item">
-              <Link class="nav-link m-2"  to="/profile/:userId">
+              <Link class="nav-link m-2"  to="/profile">
                 Profile
               </Link>
             </li>

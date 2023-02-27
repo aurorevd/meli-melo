@@ -22,13 +22,14 @@ const App = () => {
     <div >
       <AuthProvider>
         <BrowserRouter history={history}>
+          {/* <ProfilePageLayout/> */}
           <Routes>
-          <Route path="/loginsignup" element={<SignUp/>}/>
             <Route path="/" element={<HomePage />}/>
-            <Route path="/profile/" element={<RequireAuth><ProfilePage/></RequireAuth>}/>
+            {/* <Route path="/profile" element={<ProfilePage/>}/> */}
               <Route path="/loginsignup" element={<LoginPage />} /> 
                <Route path = "/post" element={<PostPopUp/>}/>  
                <Route path= "/profile" element={<ProfilePageLayout/>}/> 
+               <Route path="/loginsignup" element={<SignUp/>}/>
           </Routes>
         </BrowserRouter>
       </AuthProvider>

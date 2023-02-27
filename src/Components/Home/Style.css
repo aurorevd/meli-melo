@@ -17,17 +17,27 @@
     border: 1px solid #00c4cc ;
   }
 
-
-
-
 .navbar{
     display: flex;
     align-items: center;
 }
+.a{
+    color:lightgrey !important;
+}
 .leftBar{
-  
+    /* text-decoration: none !important; */
+    color:grey !important;
     line-height: 50px;
     width:20%;
+}
+/* #menu{
+    color: grey !important;
+} */
+/* .nav-link:hover{
+    background-color: aliceblue;
+} */
+.nav-link{
+    color: #00c4cc !important;
 }
 
 .random{
