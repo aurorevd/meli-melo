@@ -1,63 +1,53 @@
-.messenger{
-    height: calc(100vh - 70px);
-    display: flex;
-}
-.chatMenu{
-    flex: 3.5;
-}
-.chatMenuInput{
-    width: 90%;
-    padding: 10px 0;
-    border: none;
-    border-bottom: 1px solid gray;
-}
-.chatBox{
-    flex: 5.5;
-    width:60%
-}
-.chatBoxTop{
+.random-class-1{
  
-    overflow-y: scroll;
-}
-.chatBoxBottom{
-    margin-top: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.chatMenuWrapper,.chatBoxWrapper,.chatOnlineWrapper{
-    padding: 10px;
-    
-}
-.message{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-}
-.messageTop{
-    display: flex;
-}
-.messageImg{
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
-}
-.messageText{
-    padding: 10px;
-    border-radius: 20px;
-    background-repeat: 20px;
+    font-size: 30px;
+    font-family: 'Smokum', cursive;
+  }
+.random-class-2{
    
-    
-}
+    font-size: 30px;
+    font-family: 'Chakra Petch', sans-serif;
 
-.postbar{
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-}
-.chatMessageInput{
-    width : 800px !important;
-}
+  }
+  .random-class-3{
+   
+    font-size: 30px;
+    font-family: 'Gloock', serif;
+
+  }
+  .random-class-4{
+   
+    font-size: 30px;
+    font-family: 'Kaushan Script', cursive;
+
+  }
+  .random-class-5{
+   
+    font-size: 30px;
+    font-family: 'Nanum Pen Script', cursive;
+
+  }
+  .random-class-6{
+   
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+
+  }
+  .random-class-7{
+   
+    font-size: 30px;
+    font-family: 'Righteous', cursive;
+
+  }
+  .random-class-8{
+   
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+
+  }
+  .random-class-9{
+   
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+
+  }
