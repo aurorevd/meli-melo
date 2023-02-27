@@ -2,7 +2,6 @@ import '../Home/Style.css'
 import "./RandomText.css";
 import PostPopUp from '../Home/PostPopUp';
 import axios from "axios";
-import "./Messenger.css";
 import { v4 as uuidv4 } from 'uuid';
 
 import React,{useState, useEffect} from 'react';
@@ -36,7 +35,8 @@ function RandomText() {
       });
       shuffle(newMessages);
       setMessages(newMessages);
-    } catch (error) {
+    } 
+    catch (error) {
       console.log(error);
     }
   };
@@ -46,11 +46,10 @@ function RandomText() {
     const words = message.split(' ');
     const font_family = `random-class-${Math.floor(Math.random() * 6)}`;
     const randomIndex = Math.floor(Math.random() * (words.length - 1));
-const content1 = words.slice(0, randomIndex).join(' ');
-const content2 = words.slice(randomIndex).join(' ');
-const textToAdd = { content: message, font_family };
-const textToSplit = { content1, content2, font_family };
-   
+    const content1 = words.slice(0, randomIndex).join(' ');
+    const content2 = words.slice(randomIndex).join(' ');
+    const textToAdd = { content: message, font_family };
+    const textToSplit = { content1, content2, font_family };
     
     axios
       .post('/homepage/post', textToAdd)
@@ -73,37 +72,31 @@ const textToSplit = { content1, content2, font_family };
   };
   
   return (
-    <div className='chatBox'>
-      <div className="message">
-        <div className='messageText'>
-          {messages.map((msg) => (
-            <span className={msg.font_family}>
-              {" "}{msg.content1}{" "}
-            </span>
-          ))}
-          {messages.map((msg) => ( 
-            <span className={msg.font_family}>
-              {" "}{msg.content2}{" "}
-            </span>
-          ))}
-        </div>
-      </div>
+  <div class="flex">
+      {messages.map((msg) => (
+        <span className={msg.font_family}>
+          {" "}{msg.content1}{" "}
+        </span>
+      ))}
+      {messages.map((msg) => ( 
+        <span className={msg.font_family}>
+          {" "}{msg.content2}{" "}
+        </span>
+      ))}
       
-      <div class="fixed-bottom   mb-3   postbar ">
-        {/*  mx-sm-3  m-3 ms-5  d-flex */}
-        <form className='chatBoxBottom ' onSubmit={handleSubmit}>
-          <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle ms-5"/>
-          <input  class="form-control   m-2 ms-2 chatMessageInput " 
+    <div class="fixed-bottom mb-3 postbar ">
+      <form  onSubmit={handleSubmit}>
+        <input  class="form-control   m-2 ms-2 chatMessageInput " 
                 required
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Post here"/>
-          <div class="col-4 ">
-            <PostPopUp/>
-          </div>
-        </form>
-      </div>
+        <div class="col-4 ">
+          <PostPopUp/>
+        </div>
+      </form>
     </div>
+  </div>
   );
 }
 

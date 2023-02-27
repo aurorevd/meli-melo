@@ -10,10 +10,7 @@ import {RequireAuth} from './Components/Login/RequireAuth'
 import SignUp from './Components/Login/SignUp';
 import './Components/Home/Style.css'
 import PostPopUp from './Components/Home/PostPopUp';
-import RandomText from './Components/PostFunctions/RandomText';
 import ProfilePageLayout from './Components/UserProfile/ProfilePageLayout';
-
-
 
 const history = createBrowserHistory();
 
