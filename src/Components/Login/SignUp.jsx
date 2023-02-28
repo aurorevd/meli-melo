@@ -1,8 +1,5 @@
 import React, { useRef,useState } from 'react';
 import axios from "axios";
-
-import Logo from "../../assets/bg.png";
-import { Link } from 'react-router-dom';
 import '../Home/Style.css'
 import LoginPage from './LoginPage';
 
