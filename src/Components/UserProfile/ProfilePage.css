@@ -1,5 +1,3 @@
-
-
 /* .ppdiv1{
     width:100% !important;
     height:50% !important;
@@ -7,20 +5,40 @@
 } */
 
 @-ms-viewport {
-    width: device-width;
-  }
-  
-  figcaption,
-  footer,
-  header,
-  main,
-  nav,
-  section {
-    display: block;
-  }
+  width: device-width;
+}
+
+figcaption,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
 .header{
-    background-size: cover;
-     background-position: center top;
-     min-height: 600px;
-     
+  background-size: cover;
+   background-position: center top;
+   min-height: 600px;
+   
+}
+
+.gradient-custom-2 {
+/* fallback for old browsers */
+background: #05c0cc;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, #4fc9d2, #38caff, #a274ff);
+/* background: linear-gradient(to right,#05c0cc, #38caff,#a274ff) !important; */
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, #43d6de,#38caff, #a274ff)
+}
+
+.logoutPro{
+  display: flex;
+
+}
+.user-txtclr{
+  color: white !important;
 }
