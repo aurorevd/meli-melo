@@ -25,7 +25,7 @@ function LoginPage () {
         console.log(userId);
         localStorage.setItem("user_id", userId);
         auth.login(user);
-      navigate(redirectPath, {replace :true});
+        navigate(redirectPath, { replace: true });
       })
       .catch((error) => {
         console.log(error);
@@ -47,7 +47,8 @@ function LoginPage () {
           <li class="nav-item active">
           <div class="col-md-10 ms-2">
                 <div class="form-outline">
-                    <label class="form-label ms-2 my-0 " for="typeText"><h5>Login </h5></label>
+                    <label class="form-label ms-2 my-0 " for="typeText"><h5>Login </h5>
+                    </label>
                     <input type="email" class="form-control mx-2 " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"{...register("email")}/>
                     
                 </div>
@@ -64,7 +65,7 @@ function LoginPage () {
               </div>
             </li>
             <li>
-              <Link class="nav-link width=auto "  to="/home">
+              <Link class="nav-link width=auto "  to="/">
               <button type="button" class="btn mt-4">Log in</button></Link>
             </li>
           

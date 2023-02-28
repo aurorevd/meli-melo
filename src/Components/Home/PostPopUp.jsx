@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import './Style.css'
-import AsciiArtSketch from '../AsciiArtSketch';
-
+import Plane from "../../assets/plane.svg"
 
 function PostPopUp() {
   const [show, setShow] = useState(false);
@@ -13,9 +12,9 @@ function PostPopUp() {
 
   return (
     <>
-      <Button  type="button" class="btn me-3" onClick={handleShow}>
-       Post
-      </Button>
+      <button  type="button" class="bg-white rounded btn2" onClick={handleShow}>
+      <img src={Plane} alt=""  style={{ height: '40px', marginLeft :'10px',}}/>
+      </button>
 
       <Modal class="modal-lg"
         show={show}

@@ -4,6 +4,9 @@ import PostPopUp from '../Home/PostPopUp';
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 
+import Plane from "../../assets/plane.svg"
+
+
 import React,{useState, useEffect} from 'react';
 
 function RandomText() {
@@ -72,7 +75,8 @@ function RandomText() {
   };
   
   return (
-  <div class="flex">
+  <div class="random">
+    <span class="">"</span>
       {messages.map((msg) => (
         <span className={msg.font_family}>
           {" "}{msg.content1}{" "}
@@ -81,19 +85,17 @@ function RandomText() {
       {messages.map((msg) => ( 
         <span className={msg.font_family}>
           {" "}{msg.content2}{" "}
-        </span>
-      ))}
+        </span>      ))}
+        <span class="">"</span>
       
-    <div class="fixed-bottom mb-3 postbar ">
-      <form  onSubmit={handleSubmit}>
-        <input  class="form-control   m-2 ms-2 chatMessageInput " 
+    <div class="fixed-bottom mb-5 postbar w-100 flex ">
+      <form  onSubmit={handleSubmit} class="flex w-100">
+        <input  class="form-control w-50 chatMessageInput " 
                 required
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Post here"/>
-        <div class="col-4 ">
-          <PostPopUp/>
-        </div>
+           
       </form>
     </div>
   </div>

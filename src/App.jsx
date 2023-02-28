@@ -2,7 +2,6 @@
 import { createBrowserHistory } from 'history';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./Components/Home/HomePage"
-import AboutPage from "./Components/About/AboutPage"
 import ProfilePage from "./Components/UserProfile/ProfilePage";
 import { AuthProvider } from "./Components/Login/Auth"
 import LoginPage from "./Components/Login/LoginPage"
