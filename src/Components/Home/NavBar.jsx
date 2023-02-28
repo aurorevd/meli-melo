@@ -1,28 +1,11 @@
 import React from "react";
-import Logo from "../../assets/2.png"
 import { Link } from "react-router-dom";
 import '../Home/Style.css'
 import PostPopUp from "./PostPopUp";
 import axios from "axios"
-import Logo2 from "../../assets/meli.png"
-import { useState} from 'react';
 
 const NavBar = () => {
-    const [hover, setHover] = useState(false);
-    const handleHover = () => {
-      setHover(!hover);
-    };
-  
-    const logoStyle = {
-    
-      width: "250px",
-      height: "100px",
-      backgroundImage: `url(${hover ? Logo2 : Logo})`,
-      backgroundSize: "cover",
-      textDecoration: "none",
-      border: "none !important",
-  boxShadow: "none !important"
-    };
+   
 
   const req = async () => {
     try {
@@ -48,7 +31,7 @@ const NavBar = () => {
         <div class="collapse navbar-collapse " id="navbarTogglerDemo03">
           <ul class="navbar-nav  mt-2 mt-lg-0 justify-start">
             <li class="nav-item active">
-              <Link class="nav-link m-2"  to="/">
+              <Link class="nav-link m-2 "  to="/">
                 Home
               </Link>
             </li>
@@ -64,9 +47,6 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-  
-        <Link href="#" style={{ ...logoStyle, border: 'none !important' }}  onMouseEnter={handleHover} onMouseLeave={handleHover} class="border-0 text-decoration-none object-fit-cover shadow-none" to="/" >
-        </Link>
       
         <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
           <div class="navbar-nav ms-auto mt-2 mt-lg-0">
