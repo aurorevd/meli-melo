@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import '../Home/Style.css'
-import PostPopUp from "./PostPopUp";
 import axios from "axios"
 
 const NavBar = () => {
@@ -36,7 +35,7 @@ const NavBar = () => {
               </Link>
             </li>
             <li class="nav-item">
-              <Link class="nav-link m-2"  to="/profile/:userId">
+              <Link class="nav-link m-2"  to="/profile" >
                 Profile
               </Link>
             </li>
