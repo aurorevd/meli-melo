@@ -9,7 +9,6 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 
 function SignUp() {
-  const [user, setUser] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
 
