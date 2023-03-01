@@ -9,11 +9,6 @@ const ProfilePageLayout = () => {
    const auth = useAuth()
    const navigate=useNavigate()
 
-   const handleLogout = () =>{
-      auth.logout()
-      navigate('/')
-   }
-
    const req = async () => {
     try {
       await axios.get("/user/logout", {
@@ -22,9 +17,12 @@ const ProfilePageLayout = () => {
         },
       });
       console.log("logout sucess")
+      auth.logout()
+      navigate('/')
     }
     catch (error) {
     console.log(error);
+    
     }
   }
 
@@ -33,25 +31,25 @@ const ProfilePageLayout = () => {
        {auth.user}
       <div className="gradient-custom-2" style={{ backgroundColor: '#9de2ff' }}>
       <MDBContainer className=" h-100">
-      <nav class="navbar navbar-expand-lg  ">
-      <div class="collapse navbar-collapse " id="navbarTogglerDemo03">
-          <ul class="navbar-nav  mt-2 mt-lg-0 justify-start navuser">
-            <li class="nav-item ">
-              <Link class="nav-link m-2 user-txtclr"  to="/">
+      <nav className="navbar navbar-expand-lg  ">
+      <div className="collapse navbar-collapse " id="navbarTogglerDemo03">
+          <ul className="navbar-nav  mt-2 mt-lg-0 justify-start navuser">
+            <li className="nav-item ">
+              <Link className="nav-link m-2 user-txtclr"  to="/">
                 Home
               </Link>
             </li>
-            <li class="nav-item ">
-              <Link class="nav-link width=auto m-2 user-txtclr"  to="/groups">
+            <li className="nav-item ">
+              <Link className="nav-link width=auto m-2 user-txtclr"  to="/groups">
                 Groups
               </Link>
             </li>
           </ul>
         </div>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
-        <div class="navbar-nav ms-auto mt-2 mt-lg-0">
-        <div class="nav-link width=auto">
-            <button onClick={req} type="button" class=" btn me-3">
+        <div className="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
+        <div className="navbar-nav ms-auto mt-2 mt-lg-0">
+        <div className="nav-link width=auto">
+            <button onClick={req} type="button" className=" btn me-3">
               Logout
             </button>
             </div>

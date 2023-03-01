@@ -27,10 +27,10 @@ function HomePage() {
   };
   
   return (
-    <div class="relative">
+    <div className="relative">
       <NavBar/>
-      <div class="flex flex-column align-items-center">
-      <Link href="" style={{ ...logoStyle, border: 'none !important' }}  onMouseEnter={handleHover} class="border-0 text-decoration-none object-fit-cover shadow-none" to="/" >
+      <div className="flex flex-column align-items-center">
+      <Link href="" style={{ ...logoStyle, border: 'none !important' }}  onMouseEnter={handleHover} className="border-0 text-decoration-none object-fit-cover shadow-none" to="/" >
         </Link>
         <RandomText/>
       </div>
