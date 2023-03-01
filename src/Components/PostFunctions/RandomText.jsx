@@ -74,10 +74,6 @@ function RandomText({ shuffle }) {
     setMessages((prevMessages) => [...prevMessages, textToSplit]);
     setMessage('');
   };
-
-
-  // Shuffle array using Fisher-Yates algorithm
-  
   return (
   <div class="random">
     <span class="">"</span>
