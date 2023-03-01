@@ -4,6 +4,7 @@ import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCar
 import './ProfilePage.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import ErrorBoundary from './ErrorBoundary';
 
 const ProfilePageLayout = () => {
    const auth = useAuth()
@@ -27,6 +28,7 @@ const ProfilePageLayout = () => {
   }
 
    return (
+    <ErrorBoundary>
       <div>
        {auth.user}
       <div className="gradient-custom-2" style={{ backgroundColor: '#9de2ff' }}>
@@ -129,6 +131,7 @@ const ProfilePageLayout = () => {
       </MDBContainer>
     </div>
       </div>
+      </ErrorBoundary>
    )
 }
 

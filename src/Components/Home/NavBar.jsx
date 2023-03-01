@@ -9,7 +9,7 @@ const NavBar = () => {
       await axios.get("/user/logout", {
         headers: {
           "ngrok-skip-browser-warning": "69420",
-        },
+        }, 
       });
       console.log("logout sucess")
     }
@@ -28,19 +28,14 @@ const NavBar = () => {
 
         <div className="collapse navbar-collapse " id="navbarTogglerDemo03">
           <ul className="navbar-nav  mt-2 mt-lg-0 justify-start">
-            <li className="nav-item active">
-              <Link className="nav-link m-2 "  to="/">
-                Home
+            <li className="nav-item">
+              <Link className="homelink m-2"  to="/profile" >
+                PROFILE
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link m-2"  to="/profile" >
-                Profile
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link width=auto m-2"  to="/groups">
-                Groups
+              <Link className="homelink width=auto m-2"  to="/groups">
+                CREATE TEXTS
               </Link>
             </li>
           </ul>
@@ -52,18 +47,7 @@ const NavBar = () => {
               <button type="button" className="btn  me-2 ">Log In
               </button>
             </Link>
-          
-            <Link className="nav-link width=auto "  to="/loginsignup">
-              <button type="button" className="btn me-3">
-                Sign Up
-              </button>
-            </Link>
 
-            <div className="nav-link width=auto">
-            <button onClick={req} type="button" className=" btn me-3">
-              Logout
-            </button>
-            </div>
           </div>
         </div>
       </nav>
