@@ -4,7 +4,6 @@ import "./Style.css";
 import Logo2 from "../../assets/meli.png";
 import { useState, useEffect } from "react";
 import Logo from "../../assets/2.png";
-import { Link } from "react-router-dom";
 
 function HomePage() {
   const [clicked, setClicked] = useState(false);

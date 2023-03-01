@@ -82,6 +82,50 @@
     border: none !important;
 }
 
+
+
+.containerNavBar{
+    width: 100% !important;
+    border: none;
+    text-decoration: none;
+}
+.btn{
+    background-color: #00c4cc !important;
+    color:white !important;
+    border: none !important;
+    
+}
+.btn:hover{
+    color: #00c4cc !important ;
+    background-color: #fff !important;
+    border: 1px solid #00c4cc ;
+  }
+  
+.btn2{
+    background-color: white!important;
+    border: none !important;
+    box-shadow: none!important;
+    border: none;  
+}
+.btn2:hover{
+    color: #00c4cc!important ;
+    background-color: red;
+  }
+
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+.random{
+    width:70%;
+    height: 500px;
+    align-items: center;
+    text-align: justify;
+    font-size: 50px;
+}
+
 .navBarDiv{
     width: 50% !important;
 }
