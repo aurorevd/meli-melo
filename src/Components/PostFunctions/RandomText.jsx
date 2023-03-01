@@ -1,4 +1,4 @@
-import '../Home/Style.css'
+import '../Home/Style.css'; // corrected import statement
 import "./RandomText.css";
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
@@ -7,9 +7,25 @@ import { v4 as uuidv4 } from 'uuid';
 
 import React,{useState, useEffect} from 'react';
 
-function RandomText() {
+function RandomText({ shuffle }) {
+  
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
+  const shuffleArray = (array) => {
+    const shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+    setMessages(shuffledArray);
+  };
+  
+  
+  useEffect(() => {
+    if (shuffle) {
+      shuffleArray(messages); // changed shuffle to shuffleArray
+    }
+  }, [shuffle, messages]); // added messages as a dependency to prevent infinite loop
 
   useEffect(() => {
     getTexts();
@@ -34,7 +50,7 @@ function RandomText() {
         const id2 = uuidv4();
         return { id1, content1, font_family, id2, content2 };
       });
-      shuffle(newMessages);
+      shuffleArray(newMessages); // changed shuffle to shuffleArray
       setMessages(newMessages);
     } 
     catch (error) {
@@ -64,13 +80,8 @@ function RandomText() {
     setMessage('');
   };
 
+
   // Shuffle array using Fisher-Yates algorithm
-  const shuffle = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-  };
   
   return (
   <div class="random">

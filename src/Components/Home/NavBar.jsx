@@ -4,8 +4,6 @@ import '../Home/Style.css'
 import axios from "axios"
 
 const NavBar = () => {
-   
-
   const req = async () => {
     try {
       await axios.get("/user/logout", {
@@ -19,6 +17,7 @@ const NavBar = () => {
     console.log(error);
     }
   }
+  
   return (
   <div className="containerNavBar" >
      <nav className="navbar  navbar-expand-lg navbar-light sticky container-xxl flex-wrap flex-lg-nowrap ">

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Style.css'
-import RandomText from '../PostFunctions/RandomText'
+
 
 export default function LeftBar() {
   return (

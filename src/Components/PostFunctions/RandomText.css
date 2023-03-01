@@ -1,7 +1,7 @@
 .random-class-0{
  
   font-size: 30px !important;;
-  font-family: 'Smokum', cursive;
+  font-family: 'Italianno', 'Helvetica', cursive;
 }
 .random-class-1{
  
@@ -28,7 +28,7 @@
   }
   .random-class-5{
    
-    font-size: 30px !important;;
+    font-size: 38px !important;;
     font-family: 'Nanum Pen Script', cursive;
 
   }
@@ -50,6 +50,12 @@
     font-family: 'Roboto', sans-serif;
 
   }
+  .random-class-9{
+    font-size: 30px !important;
+    font-family: 'Roboto Mono', monospace;
+
+  }
+
   .random-class-9{
    
     font-size: 30px !important;

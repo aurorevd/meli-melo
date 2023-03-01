@@ -7,7 +7,8 @@ export const useAuth=() => {
 
 export const AuthProvider =({children}) => {
     const[user, setUser] = useState(null)
- const[register, setRegister] = useState(false)
+    const[register, setRegister] = useState(false)
+    
     const login = user =>{
       setUser (user)
     }
