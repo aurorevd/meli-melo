@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import './Style.css'
-import AsciiArtSketch from '../AsciiArtSketch';
-
+import Plane from "../../assets/plane.svg"
 
 function PostPopUp() {
   const [show, setShow] = useState(false);
@@ -13,11 +12,11 @@ function PostPopUp() {
 
   return (
     <>
-      <Button  type="button" class="btn me-3" onClick={handleShow}>
-       Post
-      </Button>
+      <button  type="button" className="bg-white rounded btn2" onClick={handleShow}>
+      <img src={Plane} alt=""  style={{ height: '40px', marginLeft :'10px',}}/>
+      </button>
 
-      <Modal class="modal-lg"
+      <Modal className="modal-lg"
         show={show}
         onHide={handleClose}
         backdrop="static"
@@ -29,14 +28,14 @@ function PostPopUp() {
         <Modal.Body>
         <div >
     {/* <label for="exampleFormControlTextarea1"></label>
-    <textarea class="form-control" id="exampleFormControlTextarea1"placeholder='lets post something!!!' rows="3"></textarea> */}
+    <textarea className="form-control" id="exampleFormControlTextarea1"placeholder='lets post something!!!' rows="3"></textarea> */}
   </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button class="btn ">Post</Button>
+          <Button className="btn ">Post</Button>
         </Modal.Footer>
       </Modal>
     </>

@@ -1,4 +1,3 @@
-
 import RandomText from "../PostFunctions/RandomText";
 import NavBar from "./NavBar";
 import "./Style.css";
