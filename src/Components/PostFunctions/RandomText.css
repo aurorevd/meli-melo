@@ -1,54 +1,64 @@
+.random-class-0{
+ 
+  font-size: 30px !important;;
+  font-family: 'Italianno', 'Helvetica', cursive;
+}
 .random-class-1{
-    background-color: rgba(252, 252, 252, 0.861);
-    font-size: 30px;
+ 
+    font-size: 30px !important;;
     font-family: 'Smokum', cursive;
   }
 .random-class-2{
-  background-color: rgba(252, 252, 252, 0.861);
-    font-size: 30px;
+   
+    font-size: 30px !important;;
     font-family: 'Chakra Petch', sans-serif;
 
   }
   .random-class-3{
-    background-color: rgba(252, 252, 252, 0.861);
-    font-size: 30px;
+   
+    font-size: 30px !important;;
     font-family: 'Gloock', serif;
-    height:30px
+
   }
   .random-class-4{
-    background-color: rgba(252, 252, 252, 0.861);
-    font-size: 30px;
+   
+    font-size: 30px !important;;
     font-family: 'Kaushan Script', cursive;
-    height:30px
+
   }
   .random-class-5{
-    background-color: rgba(252, 252, 252, 0.861);
-    font-size: 30px;
+   
+    font-size: 38px !important;;
     font-family: 'Nanum Pen Script', cursive;
-    height:30px
 
   }
   .random-class-6{
-    background-color: rgba(252, 252, 252, 0.861);
-    font-size: 30px;
+   
+    font-size: 30px !important;
     font-family: 'Open Sans', sans-serif;
-    height:30px
+
   }
   .random-class-7{
-    background-color: rgba(252, 252, 252, 0.861);
-    font-size: 30px;
+   
+    font-size: 30px !important;;
     font-family: 'Righteous', cursive;
-    height:30px
+
   }
   .random-class-8{
-    background-color: rgba(252, 252, 252, 0.861);
-    font-size: 30px;
+   
+    font-size: 30px !important;;
     font-family: 'Roboto', sans-serif;
-    height:30px
+
   }
   .random-class-9{
-    background-color: rgba(252, 252, 252, 0.861);
-    font-size: 30px;
+    font-size: 30px !important;
     font-family: 'Roboto Mono', monospace;
-    height:30px
+
+  }
+
+  .random-class-9{
+   
+    font-size: 30px !important;
+    font-family: 'Roboto Mono', monospace;
+
   }
