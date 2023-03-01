@@ -1,10 +1,8 @@
 import '../Home/Style.css'; // corrected import statement
 import "./RandomText.css";
-import PostPopUp from '../Home/PostPopUp';
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 
-import Plane from "../../assets/plane.svg"
 
 
 import React,{useState, useEffect} from 'react';

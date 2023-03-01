@@ -80,6 +80,7 @@ function HomePage() {
           <div style={logo2Style}></div>
         </div>
         <RandomText shuffle={shuffle} />
+
       </div>
     </div>
   );
