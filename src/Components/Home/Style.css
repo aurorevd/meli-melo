@@ -6,13 +6,13 @@
     text-decoration: none;
 }
 .btn{
-    background-color: #00c4cc !important;
+    background-color: #81c7da !important;
     color:white !important;
     border: none !important;
     
 }
 .btn:hover{
-    color: #00c4cc !important ;
+    color: #81c7da !important ;
     background-color: #fff !important;
     border: 1px solid #00c4cc ;
   }
@@ -24,7 +24,7 @@
     border: none;  
 }
 .btn2:hover{
-    color: #00c4cc!important ;
+    color: #81c7da!important ;
     background-color: red;
   }
 
@@ -32,10 +32,7 @@
     display: flex;
     align-items: center;
 }
-.leftBar{
-    line-height: 50px;
-    width:20%;
-}
+
 
 .flex{
     display: flex;
@@ -47,7 +44,6 @@
     height: 500px;
     align-items: center;
     text-align: justify;
-    font-size: 50px;
 }
 
 .loginCard{
@@ -55,7 +51,7 @@
     margin: 2em; 
 }
 .h3{
-   color:#00c4cc !important;
+   color:#81c7da !important;
 }
 
 .loginNavBar{
@@ -77,56 +73,27 @@
     width:98% !important;
 }
 .custom-checkbox{
-    background-color:#00c4cc !important;
+    background-color:#81c7da !important;
     
     border: none !important;
-}
-
-
-
-.containerNavBar{
-    width: 100% !important;
-    border: none;
-    text-decoration: none;
-}
-.btn{
-    background-color: #00c4cc !important;
-    color:white !important;
-    border: none !important;
-    
-}
-.btn:hover{
-    color: #00c4cc !important ;
-    background-color: #fff !important;
-    border: 1px solid #00c4cc ;
-  }
-  
-.btn2{
-    background-color: white!important;
-    border: none !important;
-    box-shadow: none!important;
-    border: none;  
-}
-.btn2:hover{
-    color: #00c4cc!important ;
-    background-color: red;
-  }
-
-
-.flex{
-    display: flex;
-    justify-content: center;
-}
-
-.random{
-    width:70%;
-    height: 500px;
-    align-items: center;
-    text-align: justify;
-    font-size: 50px;
 }
 
 .navBarDiv{
     width: 50% !important;
 }
 
+.homelink{
+    text-decoration: none;
+    font-family: helvetica;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    box-shadow: none;
+    
+}
+
+.homelink:hover{
+    
+    color: #81c7da
+    
+}

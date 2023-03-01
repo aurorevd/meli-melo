@@ -2,15 +2,21 @@ import RandomText from "../PostFunctions/RandomText";
 import NavBar from "./NavBar";
 import "./Style.css";
 import Logo2 from "../../assets/meli.png";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Logo from "../../assets/2.png";
 
 function HomePage() {
   const [clicked, setClicked] = useState(false);
-  const handleClick = () => {
-    setClicked(!clicked);
-  };
+  const [shuffle, setShuffle] = useState(false);
+  const logoRef = useRef(null);
 
+  const handleClick = () => {
+    if (!clicked) {
+      setClicked(true);
+      setShuffle(true);
+    }
+  };
+  
   const logoStyle = {
     marginBottom: "50px",
     width: "350px",
@@ -20,9 +26,10 @@ function HomePage() {
     boxShadow: "none !important",
     display: "block",
     position: "relative",
-    transition: "width 1s, height 1s, background-image 1s, transform 2s",
-    transform: `rotate(${clicked ? "2160deg" : "0"})`,
+    transform: `rotate(${clicked ? "2160deg" : "0"}) scale(${clicked ? "0.7" : "1"})`,
     transformOrigin: "center",
+    transition: "transform 2s",
+    textShadow :" 2px 2px 4px #000000",
   };
 
   const logo1Style = {
@@ -46,40 +53,32 @@ function HomePage() {
     height: "100%",
     backgroundImage: `url(${Logo2})`,
     backgroundSize: "cover",
-    filter: clicked ? "none !important" : "blur(3px)!important",
-    transition: "opacity 1s ease-in-out 1s", // add transition property to fade in with delay
+    filter: clicked ? "none !important" : "blur(5px) !important",
+    transition: "opacity 1s ease-in-out 1s, filter 2s", // add filter to transition property
   };
 
-  const [shuffle, setShuffle] = useState(false);
-
   useEffect(() => {
-    // Start shuffle after the logo rotates
-    if (clicked) {
-      setTimeout(() => {
-        setShuffle(true); // start shuffle
-      }, 2000); // delay the shuffle start for 2 seconds to match the logo rotation transition
-    }
-  }, [clicked]);
-
-  useEffect(() => {
-    // Stop shuffle after the logo rotation is complete
-    if (shuffle && !clicked) {
-      setTimeout(() => {
+    // Stop shuffle after two rotations of the logo
+    const logoEl = logoRef.current;
+    const handleTransitionEnd = () => {
+      if (clicked) {
+        setClicked(false);
         setShuffle(false);
-      }, 2000);
-    }
-  }, [shuffle, clicked]);
-
+      }
+    };
+    logoEl.addEventListener("transitionend", handleTransitionEnd);
+    return () => logoEl.removeEventListener("transitionend", handleTransitionEnd);
+  }, [clicked]);
+  
   return (
     <div className="relative">
       <NavBar />
       <div className="flex flex-column align-items-center">
-        <div style={logoStyle} onClick={handleClick}>
+        <div style={logoStyle} onClick={handleClick} ref={logoRef}>
           <div style={logo1Style}></div>
           <div style={logo2Style}></div>
         </div>
         <RandomText shuffle={shuffle} />
-
       </div>
     </div>
   );

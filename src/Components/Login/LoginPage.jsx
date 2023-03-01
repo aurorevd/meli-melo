@@ -14,24 +14,25 @@ function LoginPage () {
   const [user, setUser] = useState('');
   const auth = useAuth();
   const redirectPath = location.state?.path || '/'
-
  let navigate = useNavigate();
-  const onSubmit = async (data = {}) => {
-    console.log(data)
-     axios
-      .post("/user/login", data)
-      .then((response) => {
-       const userId = response.data.id;
-        console.log(userId);
-        localStorage.setItem("user_id", userId);
-        auth.login(user);
-        navigate(redirectPath, { replace: true });
-      })
-      .catch((error) => {
-        console.log(error);
-        navigate ("/signup");
-       });
-   }
+ 
+ const onSubmit = async (data = {}) => {
+  console.log("button ok")
+  axios
+    .post("/user/login", data)
+    .then((response) => {
+      console.log(response);
+      const userId = response.data.id;
+      console.log(userId);
+      localStorage.setItem("user_id", userId);
+      setUser(response.data.id); // set the logged-in user information
+      auth.login(response.data.id); // login the user
+      navigate(redirectPath); // redirect to the requested page after login
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
   return (
     <div>
       <div className="flex-row">
@@ -65,8 +66,8 @@ function LoginPage () {
               </div>
             </li>
             <li>
-              <Link className="nav-link width=auto "  to="/">
-              <button type="button" className="btn mt-4">Log in</button></Link>
+              
+              <button type="submit" className="btn mt-4">Log in</button>
             </li>
           
           </ul>

@@ -11,6 +11,7 @@ export const AuthProvider =({children}) => {
     
     const login = user =>{
       setUser (user)
+      console.log(user)
     }
 
     const signIn = register =>{
