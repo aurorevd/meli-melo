@@ -1,62 +1,57 @@
-import '../Home/Style.css'; // corrected import statement
+import '../Home/Style.css'; 
 import "./RandomText.css";
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 
-
-
-import React,{useState, useEffect} from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 function RandomText({ shuffle }) {
-  
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const shuffleArray = (array) => {
+  
+  const shuffleArray = useCallback((array) => {
     const shuffledArray = [...array];
     for (let i = shuffledArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
     }
     setMessages(shuffledArray);
-  };
-  
-  
-  useEffect(() => {
-    if (shuffle) {
-      shuffleArray(messages); // changed shuffle to shuffleArray
-    }
-  }, [shuffle, messages]); // added messages as a dependency to prevent infinite loop
-
-  useEffect(() => {
-    getTexts();
   }, []);
 
-  const getTexts = async () => {
-    try {
-      const response = await axios.get('/homepage', {
-        headers: {
-          'ngrok-skip-browser-warning': '69420',
-        },
-      });
-      const dat = response.data.info;
-      console.log(dat);
-      const newMessages = dat.map((text) => {
-        const words = text.content.split(' ');
-        const randomIndex = Math.floor(Math.random() * (words.length - 1));
-        const content1 = words.slice(0, randomIndex).join(' ');
-        const content2 = words.slice(randomIndex).join(' ');
-        const font_family = text.font_family;
-        const id1 = uuidv4();
-        const id2 = uuidv4();
-        return { id1, content1, font_family, id2, content2 };
-      });
-      shuffleArray(newMessages); // changed shuffle to shuffleArray
-      setMessages(newMessages);
-    } 
-    catch (error) {
-      console.log(error);
+  useEffect(() => {
+    if (shuffle) {
+      shuffleArray(messages);
     }
-  };
+  }, [shuffle, messages, shuffleArray]);
+
+  useEffect(() => {
+    const getTexts = async () => {
+      try {
+        const response = await axios.get('/homepage', {
+          headers: {
+            'ngrok-skip-browser-warning': '69420',
+          },
+        });
+        const dat = response.data.info;
+        console.log(dat);
+        const newMessages = dat.map((text) => {
+          const words = text.content.split(' ');
+          const randomIndex = Math.floor(Math.random() * (words.length - 1));
+          const content1 = words.slice(0, randomIndex).join(' ');
+          const content2 = words.slice(randomIndex).join(' ');
+          const font_family = text.font_family;
+          const id1 = uuidv4();
+          const id2 = uuidv4();
+          return { id1, content1, font_family, id2, content2 };
+        });
+        shuffleArray(newMessages);
+        setMessages(newMessages);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getTexts();
+  }, [shuffleArray]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -79,10 +74,6 @@ function RandomText({ shuffle }) {
     setMessages((prevMessages) => [...prevMessages, textToSplit]);
     setMessage('');
   };
-
-
-  // Shuffle array using Fisher-Yates algorithm
-  
   return (
   <div class="random">
     <span class="">"</span>
