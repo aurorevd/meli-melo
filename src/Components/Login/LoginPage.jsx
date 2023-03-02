@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useAuth } from './Auth';
 import { useNavigate,useLocation } from "react-router-dom";
 import '../Home/Style.css'
-import Logo from "../../assets/bg.png";
+import Logo from "../../assets/2.png";
 import { Link } from 'react-router-dom';
 import React, {useState} from 'react';
 
@@ -36,7 +36,7 @@ function LoginPage () {
   return (
     <div>
       <div className="flex-row">
-        <nav className="loginNavBar navbar navbar-expand-lg   container-xxl flex-wrap flex-lg-nowrap  ">
+        <nav className="loginNavBar navbar navbar-expand-lg flex-wrap flex-lg-nowrap  ">
           <div className="navbar w-50" >
             <Link  to="/" >
               <img src={Logo} alt="logo" className="img-fluid object-fit-cover  rounded m-0 ms-5 my-0 loginimg"  />
