@@ -29,8 +29,7 @@ const Groups = () => {
             setGroups(newGroups)
         }
         catch (error) {
-            console.log(error);
-        }
+            console.log(error);        }
 
 
         const handleSubmit = (event) => {
