@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import Group from "./Group";
 import axios from "axios";
 import '../Home/Style.css'
-import {useNavigate} from 'react-router-dom'
-import {useAuth} from '../Login/Auth'
+import { Link } from 'react-router-dom';
+import Logo from "../../assets/2.png";
 
 const Groups = () => {
     const [groups, setGroups] = useState([]);
@@ -68,7 +68,26 @@ const Groups = () => {
     };
   
     return (
-      <div class="bg-red w-100 h-100">
+      <div class=" w-100 h-100">
+         <nav className="navbar navbar-expand-lg  ">
+      <div className="collapse navbar-collapse " id="navbarTogglerDemo03">
+          <ul className="navbar-nav  mt-2 mt-lg-0 justify-start navuser">
+          <Link  to="/" >
+              <img src={Logo} alt="logo" className="img-fluid object-fit-cover  rounded m-0 ms-5 my-0 loginimg"  />
+            </Link>
+            
+          </ul>
+        </div>
+        <div className="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
+        <div className="navbar-nav ms-auto mt-2 mt-lg-0">
+        <div className="nav-link width=auto">
+            <button onClick={req} type="button" className=" btn me-3">
+              Logout
+            </button>
+            </div>
+        </div>
+        </div>
+      </nav>
         <div>
           <ul>
             {groups.map((group) => (
