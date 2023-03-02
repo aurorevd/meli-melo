@@ -55,15 +55,14 @@
 }
 
 .loginNavBar{
-    /* background-color: #00ccc0 !important; */
     color: aliceblue !important;
-    background: linear-gradient(to right,#05c0cc, #38caff,#a274ff) !important;
-    /*  #fd3737 */
+    background: #81c7da !important;
+ 
     
 }
 .loginimg{
     /* height:16% !important; */
-    width: 22% !important;
+    width: 50% !important;
     object-fit:cover; 
 }
 .form-control{

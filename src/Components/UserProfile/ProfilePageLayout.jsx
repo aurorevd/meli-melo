@@ -4,11 +4,12 @@ import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCar
 import './ProfilePage.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import ErrorBoundary from './ErrorBoundary';
+import Logo from "../../assets/2.png";
 
 const ProfilePageLayout = () => {
    const auth = useAuth()
    const navigate=useNavigate()
+   const userName= "Fred"
 
    const req = async () => {
     try {
@@ -27,25 +28,16 @@ const ProfilePageLayout = () => {
     }
   }
 
-   return (
-    <ErrorBoundary>
-      <div>
-       {auth.user}
-      <div className="gradient-custom-2" style={{ backgroundColor: '#9de2ff' }}>
+   return (      
+      <div className="gradient-custom-2" style={{ backgroundColor: '#9de2ff',  }}>
       <MDBContainer className=" h-100">
       <nav className="navbar navbar-expand-lg  ">
       <div className="collapse navbar-collapse " id="navbarTogglerDemo03">
           <ul className="navbar-nav  mt-2 mt-lg-0 justify-start navuser">
-            <li className="nav-item ">
-              <Link className="nav-link m-2 user-txtclr"  to="/">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item ">
-              <Link className="nav-link width=auto m-2 user-txtclr"  to="/groups">
-                Groups
-              </Link>
-            </li>
+          <Link  to="/" >
+              <img src={Logo} alt="logo" className="img-fluid object-fit-cover  rounded m-0 ms-5 my-0 loginimg"  />
+            </Link>
+            
           </ul>
         </div>
         <div className="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
@@ -62,7 +54,7 @@ const ProfilePageLayout = () => {
             
           <MDBCol lg="14" xl="14">
             <MDBCard className='w-100'>
-              <div className="rounded-top text-white d-flex flex-row" style={{ backgroundColor: '#000', height: '300px' }}>
+              <div className="rounded-top text-white d-flex flex-row " style={{ backgroundColor: '#000',fontSize:'100px', height: '300px', fontWeight: "bold", }}>
                 <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150px' }}>
                   <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
                     alt="Generic placeholder image" className="mt-4 mb-2 img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
@@ -70,11 +62,14 @@ const ProfilePageLayout = () => {
                     Edit profile
                   </MDBBtn>
                 </div>
+                
                 <div className="ms-3" style={{ marginTop: '130px' }}>
                   <MDBTypography tag="h5">Andy Horwitz</MDBTypography>
                   <MDBCardText>New York</MDBCardText>
                 </div>
+                HELLO {userName} !
               </div>
+           
               <div className="p-4 text-black" style={{ backgroundColor: '#f8f9fa' }}>
                 <div className="d-flex justify-content-end text-center py-1">
                   <div>
@@ -130,8 +125,7 @@ const ProfilePageLayout = () => {
         </MDBRow>
       </MDBContainer>
     </div>
-      </div>
-      </ErrorBoundary>
+   
    )
 }
 

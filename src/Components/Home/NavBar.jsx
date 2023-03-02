@@ -34,7 +34,7 @@ const NavBar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="homelink width=auto m-2"  to="/groups">
+              <Link className="homelink width=auto m-2"  to="/create">
                 CREATE TEXTS
               </Link>
             </li>

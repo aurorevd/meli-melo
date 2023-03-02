@@ -8,6 +8,8 @@ import {RequireAuth} from './Components/Login/RequireAuth'
 import SignUp from './Components/Login/SignUp';
 import './Components/Home/Style.css'
 import ProfilePageLayout from './Components/UserProfile/ProfilePageLayout';
+import Groups from "./Components/Create/Groups"
+
 
 const history = createBrowserHistory();
 
@@ -17,10 +19,11 @@ const App = () => {
       <AuthProvider>
         <BrowserRouter history={history}>
           <Routes>
-          <Route path="/loginsignup" element={<SignUp/>}/>
+            <Route path="/loginsignup" element={<SignUp/>}/>
             <Route path="/" element={<HomePage />}/>
             <Route path="/profile" element={<RequireAuth><ProfilePageLayout/></RequireAuth>}/>
-              <Route path="/loginsignup" element={<LoginPage />} /> 
+            <Route path="/loginsignup" element={<LoginPage />} /> 
+            <Route path="/create" element={<RequireAuth><Groups/></RequireAuth>}/> 
           </Routes>
         </BrowserRouter>
       </AuthProvider>
