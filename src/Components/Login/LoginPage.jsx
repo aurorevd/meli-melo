@@ -14,59 +14,60 @@ function LoginPage () {
   const [user, setUser] = useState('');
   const auth = useAuth();
   const redirectPath = location.state?.path || '/'
-
  let navigate = useNavigate();
-  const onSubmit = async (data = {}) => {
-    console.log(data)
-     axios
-      .post("/user/login", data)
-      .then((response) => {
-       const userId = response.data.id;
-        console.log(userId);
-        localStorage.setItem("user_id", userId);
-        auth.login(user);
-        navigate(redirectPath, { replace: true });
-      })
-      .catch((error) => {
-        console.log(error);
-        navigate ("/signup");
-       });
-   }
+ 
+ const onSubmit = async (data = {}) => {
+  console.log("button ok")
+  axios
+    .post("/user/login", data)
+    .then((response) => {
+      console.log(response);
+      const userId = response.data.id;
+      console.log(userId);
+      localStorage.setItem("user_id", userId);
+      setUser(response.data.id); // set the logged-in user information
+      auth.login(response.data.id); // login the user
+      navigate(redirectPath); // redirect to the requested page after login
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
   return (
     <div>
-      <div class="flex-row">
-        <nav class="loginNavBar navbar navbar-expand-lg   container-xxl flex-wrap flex-lg-nowrap  ">
-          <div class="navbar w-50" >
+      <div className="flex-row">
+        <nav className="loginNavBar navbar navbar-expand-lg   container-xxl flex-wrap flex-lg-nowrap  ">
+          <div className="navbar w-50" >
             <Link  to="/" >
-              <img src={Logo} alt="logo" class="img-fluid object-fit-cover  rounded m-0 ms-5 my-0 loginimg"  />
+              <img src={Logo} alt="logo" className="img-fluid object-fit-cover  rounded m-0 ms-5 my-0 loginimg"  />
             </Link>
           </div>
-          <div class="d-flex navBarDiv">
+          <div className="d-flex navBarDiv">
           <form onSubmit={handleSubmit(onSubmit)}>
-          <ul class="navbar-nav ms-auto my-2 mt-lg-0">
-          <li class="nav-item active">
-          <div class="col-md-10 ms-2">
-                <div class="form-outline">
-                    <label class="form-label ms-2 my-0 " for="typeText"><h5>Login </h5>
+          <ul className="navbar-nav ms-auto my-2 mt-lg-0">
+          <li className="nav-item active">
+          <div className="col-md-10 ms-2">
+                <div className="form-outline">
+                    <label className="form-label ms-2 my-0 " for="typeText"><h5>Login </h5>
                     </label>
-                    <input type="email" class="form-control mx-2 " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"{...register("email")}/>
+                    <input type="email" className="form-control mx-2 " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"{...register("email")}/>
                     
                 </div>
             </div>
           </li>
           
-            <li class="nav-item active">
-              <div class="col-md-10 ms-2">
-                  <div class="form-outline">
-                    <label  class="form-label " for="typeText"></label>
-                    <input type="password" class="form-control m-2" id="exampleInputPassword1" placeholder="Password" {...register("password")}/>
+            <li className="nav-item active">
+              <div className="col-md-10 ms-2">
+                  <div className="form-outline">
+                    <label  className="form-label " for="typeText"></label>
+                    <input type="password" className="form-control m-2" id="exampleInputPassword1" placeholder="Password" {...register("password")}/>
                       
                   </div>
               </div>
             </li>
             <li>
-              <Link class="nav-link width=auto "  to="/">
-              <button type="button" class="btn mt-4">Log in</button></Link>
+              
+              <button type="submit" className="btn mt-4">Log in</button>
             </li>
           
           </ul>

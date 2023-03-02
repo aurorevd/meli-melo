@@ -1,4 +1,4 @@
-import React, { useRef,useState } from 'react';
+import React, { useRef } from 'react';
 import axios from "axios";
 import '../Home/Style.css'
 import LoginPage from './LoginPage';
@@ -9,7 +9,6 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 
 function SignUp() {
-  const [user, setUser] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -48,65 +47,65 @@ function SignUp() {
 
     <div >
       <LoginPage/>
-      <div class="div m-5">   
+      <div className="div m-5">   
        <form onSubmit={onSubmit}>
-        <div class="form-group m-5 ">
-        <h2 class="h3 mb-4">Sign Up</h2>
+        <div className="form-group m-5 ">
+        <h2 className="h3 mb-4">Sign Up</h2>
         <p>It's free and always will be!</p>
 
-          <div class="col-md-6">
-            <div class="form-outline">
-            <label class="form-label " for="typeText"></label>
-            <input ref={inputRefUsername} class="form-control uname" type="text"  placeholder="User Name"></input>
+          <div className="col-md-6">
+            <div className="form-outline">
+            <label className="form-label " for="typeText"></label>
+            <input ref={inputRefUsername} className="form-control uname" type="text"  placeholder="User Name"></input>
             </div>
           </div>
-          <div class="row my-1">
-          <div class="col-md-6">
-                    <div class="form-outline">
-                        <label class="form-label " for="typeText"></label>
-                        <input ref={inputRefFirstName} class="form-control  " type="text"  placeholder="First Name"></input>
+          <div className="row my-1">
+          <div className="col-md-6">
+                    <div className="form-outline">
+                        <label className="form-label " for="typeText"></label>
+                        <input ref={inputRefFirstName} className="form-control  " type="text"  placeholder="First Name"></input>
                     </div>
                 </div>
-                <div class="col-md-6">
-                <div class="form-outline">
-                    <label  class="form-label " for="typeText"></label>
-                    <input ref={inputRefLastName}class="form-control  " type="text" placeholder="Last Name"></input>
+                <div className="col-md-6">
+                <div className="form-outline">
+                    <label  className="form-label " for="typeText"></label>
+                    <input ref={inputRefLastName}className="form-control  " type="text" placeholder="Last Name"></input>
                 </div>
             </div>
           </div>
           
          
-        <div class="col-md-6">
-                <div class="form-outline">
-                <label  class="form-label  " for="typeText"></label>
-                <input ref={inputRefEmail} name="email" class="form-control emailInput" type="email"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email" />
+        <div className="col-md-6">
+                <div className="form-outline">
+                <label  className="form-label  " for="typeText"></label>
+                <input ref={inputRefEmail} name="email" className="form-control emailInput" type="email"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email" />
                 </div>
             </div>
-            <div class="row my-1">
-            <div class="col-md-6">
-                <div class="form-outline">
-                    <label class="form-label m-2" for="typeText"></label>
-                    <input ref={inputRefPassword} type="password" class="form-control  " id="exampleInputPassword1" placeholder="Password" />
+            <div className="row my-1">
+            <div className="col-md-6">
+                <div className="form-outline">
+                    <label className="form-label m-2" for="typeText"></label>
+                    <input ref={inputRefPassword} type="password" className="form-control  " id="exampleInputPassword1" placeholder="Password" />
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="form-outline">
-                <label  class="form-label m-2" for="typeText"></label>
-                <input ref={inputRefConfPassword} type="confirmpassword" class="form-control  " id="exampleInputPassword1" placeholder="confirm Password" />  
-                    {/* <input type="text" id="typeText" class="form-control" /> */}
+            <div className="col-md-6">
+                <div className="form-outline">
+                <label  className="form-label m-2" for="typeText"></label>
+                <input ref={inputRefConfPassword} type="confirmpassword" className="form-control  " id="exampleInputPassword1" placeholder="confirm Password" />  
+                    {/* <input type="text" id="typeText" className="form-control" /> */}
                 </div>
             </div>
         </div>
-            <div class="mt-4">
-                <div class="form-check">
-                <input   class="form-check-input custom-checkbox" type="checkbox" value="" id="flexCheckChecked" checked/>
-                <label class="form-check-label" for="flexCheckChecked">
+            <div className="mt-4">
+                <div className="form-check">
+                <input   className="form-check-input custom-checkbox" type="checkbox" value="" id="flexCheckChecked" checked/>
+                <label className="form-check-label" for="flexCheckChecked">
                     Accept the terms and conditions
                 </label>
                 </div> 
             </div>
             
-            <button type="submit" class="btn  mt-5 button">Sign Up!</button>
+            <button type="submit" className="btn  mt-5 button">Sign Up!</button>
             </div>
           </form>
       </div>
