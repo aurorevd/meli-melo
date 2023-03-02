@@ -89,10 +89,19 @@
     font-weight: bold;
     box-shadow: none;
     
-}
+};
 
 .homelink:hover{
     
     color: #81c7da
     
-}
+};
+
+.group {
+    background-color:  #81c7da;
+    width:200px;
+    height:200px;
+    border-radius: 100%;
+    border: black;
+
+};

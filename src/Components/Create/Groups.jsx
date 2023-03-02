@@ -1,33 +1,35 @@
 import React, { useEffect, useState } from "react";
 import Group from "./Group";
 import axios from "axios";
+import '../Home/Style.css'
 import {useNavigate} from 'react-router-dom'
 import {useAuth} from '../Login/Auth'
 
 const Groups = () => {
     const [groups, setGroups] = useState([]);
     const [newGroupName, setNewGroupName] = useState("");
-  
+    const [newSubject, setNewSubject] = useState("");
     useEffect(() => {
       req();
     }, []);
   
     const req = async () => {
       try {
-        const response = await axios.get("/api/groups", {
+        const response = await axios.get("/groups", {
           headers: {
-            "ngrok-skip-browser-warning": "69420",
+            "ngrok-skip-browser-warning":  "69420",
             //https://e6eb-84-199-109-85.eu.ngrok.io/
           },
         });
         console.log(response);
-        const dat = response.data.data;
+        const dat = response.data;
         const newGroups = dat.map((group) => {
-          const userName = group.user2_name;
+          const groupName = group.group_name;
           const id = group.id;
-          const profilePicture = group.profilePicture;
-          return { userName, id, profilePicture };
-        });
+          const subject = group.subject;
+          const date = group.date
+          return { groupName, id, subject, date };
+          });
         setGroups(newGroups);
       } catch (error) {
         console.log(error);
@@ -36,10 +38,11 @@ const Groups = () => {
   
     const handleSubmit = (event) => {
       event.preventDefault();
-      const groupname = newGroupName;
-      const groupToAdd = { groupname };
+      const group_name = newGroupName;
+      const subject= newSubject
+      const groupToAdd = { group_name, subject };
       setGroups((prevGroups) => [...prevGroups, groupToAdd]);
-  
+    console.log (groupToAdd)
       axios
         .post("/groups/creategroup", groupToAdd)
         .then((response) => {
@@ -66,7 +69,6 @@ const Groups = () => {
   
     return (
       <div class="bg-red w-100 h-100">
-        HELLO
         <div>
           <ul>
             {groups.map((group) => (
@@ -79,8 +81,14 @@ const Groups = () => {
               <input
                 value={newGroupName}
                 type="text"
-                placeholder="Enter the username"
+                placeholder="Enter the name of your group"
                 onChange={(e) => setNewGroupName(e.target.value)}
+              />
+              <input
+                value={newSubject}
+                type="text"
+                placeholder="Enter the subject of your group"
+                onChange={(e) => setNewSubject(e.target.value)}
               />
               <button type="submit">Add New Group</button>
             </div>
