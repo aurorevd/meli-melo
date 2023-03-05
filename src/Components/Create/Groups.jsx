@@ -71,11 +71,10 @@ const Groups = () => {
       <div class=" w-100 h-100">
          <nav className="navbar navbar-expand-lg  ">
       <div className="collapse navbar-collapse " id="navbarTogglerDemo03">
-          <ul className="navbar-nav  mt-2 mt-lg-0 justify-start navuser">
+        <ul className="navbar-nav  mt-2 mt-lg-0 justify-start navuser">
           <Link  to="/" >
-              <img src={Logo} alt="logo" className="img-fluid object-fit-cover  rounded m-0 ms-5 my-0 loginimg"  />
-            </Link>
-            
+            <img src={Logo} alt="logo" className="img-fluid object-fit-cover  rounded m-0 ms-5 my-0 loginimg"  />
+          </Link>
           </ul>
         </div>
         <div className="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
