@@ -56,7 +56,7 @@
 
 .loginNavBar{
     color: aliceblue !important;
-    background: #81c7da !important;
+    background: linear-gradient(to bottom, #81c7da, white)!important;
  
     
 }
@@ -111,3 +111,69 @@
     border: none;
 
 }
+.fontgeneral{
+    font-weight:bold;
+    font-size:20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.buttonwhite{
+    font-weight: bold;
+    font-size: 23px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: white;
+    color:#81c7da;
+    padding-left: 10px;
+    border-radius: 9px 9px 9px 9px;
+    box-shadow: 1px 1px 1px;
+    padding-right: 10px;
+    border:white;
+
+
+
+}
+
+.bulle {
+    width: 600px;
+    height: 500px;
+    background-image: url("../../assets/Bulle.png");
+    background-size: cover; 
+    justify-content: flex-start;
+    align-items: center;
+    display:flex;
+    padding-top: 90px;
+    flex-direction: column;
+    font-size:20px;
+    
+    
+  }
+
+  .text {
+    width:280px;
+    text-align: justify;
+    
+  }
+
+
+  .custom-img {
+   
+    width:500px;
+    height:500px;
+    
+    background-image:url("../../assets/a.png") ;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-start;
+    background-size: cover;
+  }
+
+  #massage {
+    display: block;
+  }
+  
+  .hide {
+    display: none;
+  }
+  

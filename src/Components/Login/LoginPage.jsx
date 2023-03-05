@@ -5,13 +5,13 @@ import { useNavigate,useLocation } from "react-router-dom";
 import '../Home/Style.css'
 import Logo from "../../assets/2.png";
 import { Link } from 'react-router-dom';
-import React, {useState} from 'react';
+import React from 'react';
 
 
 function LoginPage () {
   const {register,handleSubmit} = useForm();
   const location =useLocation()
-  const [user, setUser] = useState('');
+  
   const auth = useAuth();
   const redirectPath = location.state?.path || '/'
  let navigate = useNavigate();
@@ -25,7 +25,6 @@ function LoginPage () {
       const userId = response.data.id;
       console.log(userId);
       localStorage.setItem("user_id", userId);
-      setUser(response.data.id); // set the logged-in user information
       auth.login(response.data.id); // login the user
       navigate(redirectPath); // redirect to the requested page after login
     })
@@ -39,41 +38,34 @@ function LoginPage () {
         <nav className="loginNavBar navbar navbar-expand-lg flex-wrap flex-lg-nowrap  ">
           <div className="navbar w-50" >
             <Link  to="/" >
-              <img src={Logo} alt="logo" className="img-fluid object-fit-cover  rounded m-0 ms-5 my-0 loginimg"  />
+              <img src={Logo} alt="logo" className="img-fluid object-fit-cover  m-0 ms-5 my-0 loginimg"  />
             </Link>
           </div>
           <div className="d-flex navBarDiv">
           <form onSubmit={handleSubmit(onSubmit)}>
           <ul className="navbar-nav ms-auto my-2 mt-lg-0">
+         
           <li className="nav-item active">
-          <div className="col-md-10 ms-2">
-                <div className="form-outline">
-                    <label className="form-label ms-2 my-0 " for="typeText"><h5>Login </h5>
-                    </label>
-                    <input type="email" className="form-control mx-2 " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"{...register("email")}/>
-                    
-                </div>
+            <div className="col-md-10 ms-2">
+              <div className="form-outline">
+                <input type="email" className="form-control  " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"{...register("email")}/>
+              </div>
             </div>
           </li>
           
-            <li className="nav-item active">
-              <div className="col-md-10 ms-2">
-                  <div className="form-outline">
-                    <label  className="form-label " for="typeText"></label>
-                    <input type="password" className="form-control m-2" id="exampleInputPassword1" placeholder="Password" {...register("password")}/>
-                      
-                  </div>
+          <li className="nav-item active">
+            <div className="col-md-10 ms-2">
+              <div className="form-outline">
+                <input type="password" className="form-control " id="exampleInputPassword1" placeholder="Password" {...register("password")}/>
               </div>
-            </li>
-            <li>
-              
-              <button type="submit" className="btn mt-4">Log in</button>
-            </li>
-          
-          </ul>
-          </form>
-
-          </div>
+            </div>
+          </li>
+          <li>
+            <button type="submit" class="buttonwhite">Login</button>
+          </li>
+        </ul>
+      </form>
+    </div>
           
          
           

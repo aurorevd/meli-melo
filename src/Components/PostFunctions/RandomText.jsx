@@ -34,6 +34,7 @@ function RandomText({ shuffle }) {
           },
         });
         const dat = response.data.info;
+        console.log(dat)
         const newMessages = dat.map((text) => {
           const words = text.content.split(" ");
           const randomIndex = Math.floor(Math.random() * (words.length + 1));
