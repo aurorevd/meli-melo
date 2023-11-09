@@ -18,7 +18,6 @@ const Groups = () => {
         const response = await axios.get("/groups", {
           headers: {
             "ngrok-skip-browser-warning":  "69420",
-            //https://e6eb-84-199-109-85.eu.ngrok.io/
           },
         });
         console.log(response);
@@ -70,46 +69,46 @@ const Groups = () => {
     return (
       <div class=" w-100 h-100">
          <nav className="navbar navbar-expand-lg  ">
-      <div className="collapse navbar-collapse " id="navbarTogglerDemo03">
-          <ul className="navbar-nav  mt-2 mt-lg-0 justify-start navuser">
-          <Link  to="/" >
+          <div className="collapse navbar-collapse " id="navbarTogglerDemo03">
+            <ul className="navbar-nav  mt-2 mt-lg-0 justify-start navuser">
+            <Link  to="/" >
               <img src={Logo} alt="logo" className="img-fluid object-fit-cover  rounded m-0 ms-5 my-0 loginimg"  />
             </Link>
             
-          </ul>
-        </div>
-        <div className="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
-        <div className="navbar-nav ms-auto mt-2 mt-lg-0">
-        <div className="nav-link width=auto">
-            <button onClick={req} type="button" className=" btn me-3">
-              Logout
-            </button>
+            </ul>
+          </div>
+          <div className="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
+          <div className="navbar-nav ms-auto mt-2 mt-lg-0">
+              <div className="nav-link width=auto">
+                <button onClick={req} type="button" className=" btn me-3">
+                Logout
+                </button>
             </div>
         </div>
         </div>
       </nav>
-        <div>
+        <div className="divgroup">
           <ul>
             {groups.map((group) => (
               <Group info={group} delete={deleteGroup} key={group.id} />
             ))}
           </ul>
           <form action="submit" onSubmit={handleSubmit}>
-            <div>
+            <div className="grouForm">
               <h4>CREATE A GROUP :</h4>
-              <input
+              <input className="groupInput"
                 value={newGroupName}
                 type="text"
                 placeholder="Enter the name of your group"
                 onChange={(e) => setNewGroupName(e.target.value)}
               />
-              <input
+              <input className="groupInput"
                 value={newSubject}
                 type="text"
                 placeholder="Enter the subject of your group"
                 onChange={(e) => setNewSubject(e.target.value)}
               />
-              <button type="submit">Add New Group</button>
+              <button type="submit" className="addNewGroup">Add New Group</button>
             </div>
           </form>
         </div>

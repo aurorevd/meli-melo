@@ -34,7 +34,7 @@ const ProfilePageLayout = () => {
       <nav className="navbar navbar-expand-lg  ">
       <div className="collapse navbar-collapse " id="navbarTogglerDemo03">
           <ul className="navbar-nav  mt-2 mt-lg-0 justify-start navuser">
-          <Link  to="/" >
+            <Link  to="/" >
               <img src={Logo} alt="logo" className="img-fluid object-fit-cover  rounded m-0 ms-5 my-0 loginimg"  />
             </Link>
             
